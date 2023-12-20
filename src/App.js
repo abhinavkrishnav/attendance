@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './Attendancepage.css'; // Import the CSS file for styling
 
-function App() {
+const AttendancePage = () => {
+  const [attendance, setAttendance] = useState(Array(28).fill(true));
+
+  const toggleAttendance = (index) => {
+    setAttendance((prevAttendance) => {
+      const newAttendance = [...prevAttendance];
+      newAttendance[index] = !newAttendance[index];
+      return newAttendance;
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="attendance-container">
+      <div className="attendance-box">
+        <h1>Attendance</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Serial Number</th>
+              <th>Name</th>
+              <th>Attendance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Array.from({ length: 28 }, (_, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{`Teacher ${index + 1}`}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    checked={attendance[index]}
+                    onChange={() => toggleAttendance(index)}
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default AttendancePage;
