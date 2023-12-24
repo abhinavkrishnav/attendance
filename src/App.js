@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import './Attendancepage.css'; // Import the CSS file for styling
-const Header = () => {
-  return (
-    <header>
-      <h1>My Web Application</h1>      
-    </header>
-  );
-}
+
 const AttendancePage = () => {
   const [attendance, setAttendance] = useState(Array(28).fill(true));
 
@@ -20,6 +14,9 @@ const AttendancePage = () => {
 
   return (
     <div className="attendance-container">
+      <div className="header">
+        <h1 >SUBSTITUTION</h1>
+        </div>
       <div className="attendance-box">
         <h1>Attendance</h1>
         <table>
@@ -50,5 +47,4 @@ const AttendancePage = () => {
     </div>
   );
 };
-
 export default AttendancePage;
