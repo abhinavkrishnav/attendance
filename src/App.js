@@ -14,9 +14,9 @@ const AttendancePage = () => {
 
   return (
     <div className="attendance-container">
-      <div className="header">
-        <h1 >SUBSTITUTION</h1>
-        </div>
+      
+        <h1 className="header">SUBSTITUTION</h1>
+        
       <div className="attendance-box">
         <h1>Attendance</h1>
         <table>

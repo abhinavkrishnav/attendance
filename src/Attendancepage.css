@@ -15,9 +15,12 @@
   }
 
 .header {
-    border: 2px solid #272525;
+    position:absolute;
+    Top:0;
+    width: 100vw;
+    height: 30px;
+    text-align: center;
     padding: 20px;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 110px rgba(95, 172, 214, 0.1);
     background-color: rgb(164, 218, 227);
 }
