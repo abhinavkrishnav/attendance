@@ -1,26 +1,63 @@
-.attendance-container {
+/* AttendancePage.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 140vh;
-  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
 }
 
-.attendance-box {
-  border: 0px solid #272525;
+.container {
+  max-width: 600px; /* Adjusted max-width */
+  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(164, 218, 227);
+  border-radius: 8px;
+  width: 100%; /* Make the container fill its parent */
 }
 
-.header {
-  position:absolute;
-  Top:0;
-  width: 100vw;
-  height: 30px;
+h1 {
+  color: #333;
   text-align: center;
-  padding: 20px;
-  box-shadow: 0 0 110px rgba(95, 172, 214, 0.1);
-  background-color: rgb(164, 218, 227);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Added transition for smooth effect */
+}
+
+th {
+  background-color: #b3b3b3;
+}
+
+td {
+  background-color: #fff;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Style for alternate row colors */
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #4b4b4b;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
 }
